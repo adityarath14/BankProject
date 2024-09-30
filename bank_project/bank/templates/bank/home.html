@@ -1,0 +1,15 @@
+<!-- bank/templates/bank/home.html -->
+{% extends 'bank/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1>Welcome, {{ user.username }}!</h1>
+        <p>Your current balance is: <strong>${{ account.balance }}</strong></p>
+        <div class="mt-4">
+            <a href="{% url 'deposit' %}" class="btn btn-success me-2">Deposit Money</a>
+            <a href="{% url 'withdraw' %}" class="btn btn-danger">Withdraw Money</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
